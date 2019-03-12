@@ -13,7 +13,6 @@ candidatesCart = []
 candidatesUnique = []
 candidatesVote = []
 votesPercentage = []
-x = 0
 
 #read CSV file
 with open(election_data,newline="") as csvfile:
