@@ -7,7 +7,7 @@ import csv
 #create object path for csv file
 budget_data = os.path.join("budget_data.csv")
 
-#declare variables to hold values
+#declare variables and lists to hold values
 monTotal = 0    
 netTotal = 0
 netChange = 0
