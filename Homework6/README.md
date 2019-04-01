@@ -10,6 +10,36 @@ But, if pressed, how would you **prove** it?
 
 ![Equator](Images/equatorsign.png)
 
+-----------------------------------------------------------------------------------------------------------------------
+
+## Analysis
+
+In Summary, there is a correlation between latitude with temperature and humidity. As the sample shows (Figure 1 & 2), higher temperature and increase of humidity are concentrated with cities are around the equator (0 degrees latitude). There is almost no relationship between cloudiness and latitude, and just a slight trend of wind speed increasing as you go further away from the equator. 
+
+Our sample consisted of 504 cities with varying latitudes from -54.81 degrees in Ushuala (53.6 F), Argentina to +78.22 degrees in Longyearbyen (10.4 F), Norway. Temperature in the sample varied from scorching 97.54 F in Cludad Bolivar, Venezuela (latitude 8.12) to below freezing -9.93 F in Deputatskly, Russia (latitude 69.3).
+
+## temperature
+
+* The equator is on 0 degrees latitude. Figure 1 displays max temperature (F) with city's latitude. We can see from the curve of the scatter plot, the temperature around the equator at this time of 01 Apr 2019 is higher then the north and the sourthern hemisphere.
+
+* Interestingly at this time of the year, the temperature is colder in the northern hemisphere then the southern hemisphere. This may be due to the tilt of the earth from the sun. 
+
+
+## humidity
+
+* A city close to the equator, Paita, Peru (latitude -5, max temperature 62.6 F) is an outlier when visualizing figure 2 humidity. Although its neighboring cities has strong humidity bands near 100%, it outshines or outhumes other cities with humidity at 290%.
+
+* Humidity follows a similar correlation to temperature where closer to the equator higher the humidity and away from the equator the humidity % decreases. 
+
+## cloudiness
+
+* We cannot discern any correlation of cloudiness with latitude. Cloudiness is dispersed throughout the hemispheres. Further analysis should be done to test other factors then latitude to forecast cloudiness in cities.
+
+## wind speed
+
+* In figure 4, we can see cities closer to the equator has a lower wind speed then the cities away from the equator. However, wind speed doesn't have as of a strong correlation as temperature and humidity. For example, minimum wind speed in our sample is from Kichera, Russia at 0.51 mph and maximum wind speed in our sample is from Torbay, England at 28.86 mph. However, these two cities are not vastly different in terms of latitude with Kichera on 55.9 degrees and Torbay on 47.66 degrees.
+
+-----------------------------------------------------------------------------------------------------------------------
 ## WeatherPy
 
 In this example, you'll be creating a Python script to visualize the weather of 500+ cities across the world of varying distance from the equator. To accomplish this, you'll be utilizing a [simple Python library](https://pypi.python.org/pypi/citipy), the [OpenWeatherMap API](https://openweathermap.org/api), and a little common sense to create a representative model of weather across world cities.
