@@ -101,9 +101,8 @@ def start(start=None):
     # Get user input and format as date
     UserDate = dt.datetime.strptime(start, '%Y-%m-%d')
 
-    # Get range start and end dates (1 year before and after input)
+    # Get start date (1 year before)
     startDate = UserDate - dt.timedelta(days=365)
-    endDate = UserDate + dt.timedelta(days=365)
 
     # Query TMIN, TAVG, and TMAX based on start and end date
     results = session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).filter(Measurement.date >= startDate).all()
