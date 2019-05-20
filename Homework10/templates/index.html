@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission To Mars</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+    <div class="jumbotron text-center">
+    <h1>Mission to Mars</h1>
+    <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+    </div>
+    
+    <!-- News Section -->
+    <h3>Latest Mars News</h3>
+    <h6>{{ listings.newsTitle }}</h6>
+    <p>{{ listings.newsTeaser }}</p>
+
+    <!-- Featured Section -->
+    <div class="container">
+    <div class="row">
+    <h3>Featured Mars Image</h3>
+    <img src="{{ listings.featuredImage }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+    </div>
+
+    <!-- Twitter -->
+    <h3>Mars Twitter</h3>
+    <h6>{{ listings.tweet }}</h6>
+    
+    <!-- Mars Facts -->
+    <h3>Mars Facts</h3>
+    {{listings.table|safe}}
+    <a href="{{listings.table}}"></a>
+
+    <!-- Hemisphere URLs -->
+    <h3>Hemispheres</h3>
+    <ul style="list-style: none;">
+    {% for url in listings.hemURLs %}
+    <li>{{ url.title }} </li>
+    <img src="{{ url.img_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+    {% endfor %}
+    </ul>
+
+
+
+</body>
+</html>
