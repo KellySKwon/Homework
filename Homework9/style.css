@@ -1,0 +1,36 @@
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 0.3in;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(5, 163, 156);
+}
+
+.navbar-brand{
+    font-size: 0.3in;
+    background-color: rgb(5, 163, 156);
+    color: white;
+    
+}
+
+.container{
+    color: black;
+}
+
+.span{
+    color: white;
+}
+
+.firstImage {
+    width: 100%;
+    height: auto;
+
+}
+
+text {
+    float: right;
+}
+
+h2 {
+    color: rgb(5, 163, 156);
+}
