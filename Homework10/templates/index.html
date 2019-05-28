@@ -7,6 +7,7 @@
     <title>Mission To Mars</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -17,34 +18,62 @@
     </div>
     
     <!-- News Section -->
+
     <h3>Latest Mars News</h3>
-    <h6>{{ listings.newsTitle }}</h6>
-    <p>{{ listings.newsTeaser }}</p>
+    <h6><b>{{ listings.newsTitle }}</b></h6>
+    <p><i><small>{{ listings.newsTeaser }}</small></i></p>
+    <br>
+
 
     <!-- Featured Section -->
-    <div class="container">
-    <div class="row">
-    <h3>Featured Mars Image</h3>
-    <img src="{{ listings.featuredImage }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
+
+<div class="row">
+    <div class="col-md-8">
+        <h4>Featured Mars Image</h4>
+            <img src="{{ listings.featuredImage }}" width="600" height="500" alt="Mars Featured Image">
     </div>
 
-    <!-- Twitter -->
-    <h3>Mars Twitter</h3>
-    <h6>{{ listings.tweet }}</h6>
+<!-- Twitter -->
+    <div class="col-md-4">  
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Mars Twitter</h4>
+                    <p><small>{{ listings.tweet }}</small></p>
+            
+            </div>
+        </div>
+
+
+<!-- Mars Facts -->
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Mars Facts</h4>
+                    <small>{{listings.table|safe}}
+                    <a href="{{listings.table}}"></a></small>
+            </div>
+        </div>
+    </div>
+</div>
     
-    <!-- Mars Facts -->
-    <h3>Mars Facts</h3>
-    {{listings.table|safe}}
-    <a href="{{listings.table}}"></a>
 
     <!-- Hemisphere URLs -->
-    <h3>Hemispheres</h3>
-    <ul style="list-style: none;">
-    {% for url in listings.hemURLs %}
-    <li>{{ url.title }} </li>
-    <img src="{{ url.img_url }}" style="max-width:100%; max-height: auto;" alt="Mars Featured Image">
-    {% endfor %}
-    </ul>
+
+
+
+<div class="row" style="margin-top:80px;"></div>
+    <h4>Mars Hemispheres</h4>
+    <div class="col-md-6">
+            <div class="row" class="text-center">
+        {% for url in listings.hemURLs %}
+            <div class="col-md-6" class="text-center">
+            <p>{{url.title}}</p>
+            <img src="{{url.img_url}}" width="200" height="200">
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
 
 
 
